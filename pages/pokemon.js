@@ -5,7 +5,7 @@ const Pokemon = ({ pokeman }) => {
   console.log(pokeman);
   return (
     <Layout title={pokeman.name}>
-      <h1 className="text-2xl capitalize text-center">{pokeman.name}</h1>
+      <h1 className="text-4xl capitalize text-center mb-6">{pokeman.name}</h1>
       <img
         className="mx-auto w-64 h-64"
         src={pokeman.image}

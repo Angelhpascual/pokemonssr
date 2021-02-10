@@ -2,7 +2,6 @@ import Layout from "../components/Layout";
 import Link from "next/link";
 
 export default function Home({ pokemon }) {
-  console.log(pokemon);
   return (
     <Layout title="Nextjs Pokedex">
       <h1 className="text-4xl mb-8 text-center">Nextjs Pokedex</h1>
@@ -27,7 +26,7 @@ export default function Home({ pokemon }) {
   );
 }
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
   try {
     const res = await fetch("https://pokeapi.co/api/v2/pokemon?&limit=100");
     const { results } = await res.json();
